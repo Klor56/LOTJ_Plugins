@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- Saved on Sunday, February 20, 2022, 8:36 AM -->
+<!-- MuClient version 4.94 -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+<muclient>
+<world
+   muclient_version="4.94"
+   world_file_version="15"
+   date_saved="2022-02-20 08:36:19"
+
+   auto_say_override_prefix="-"
+   auto_say_string="say "
+   chat_name="Name-not-set"
+   command_stack_character=";"
+   id="fa96af87e7b8ec900ce7a220"
+   input_font_name="Fixedsys"
+   mapping_failure="Alas, you cannot go that way."
+   name="MSP LOTJ"
+   new_activity_sound="(No sound)"
+   output_font_name="FixedSys"
+   script_editor="notepad"
+   script_editor_argument="%file"
+   script_language="Lua"
+   site="legendsofthejedi.com"
+   spam_message="look"
+   speed_walk_prefix="#"
+   terminal_identification="mushclient"
+
+   arrows_change_history="y"
+   auto_pause="y"
+   auto_resize_minimum_lines="1"
+   auto_resize_maximum_lines="20"
+   chat_foreground_colour="red"
+   chat_background_colour="black"
+   chat_port="4050"
+   confirm_before_replacing_typing="y"
+   confirm_on_paste="y"
+   confirm_on_send="y"
+   default_trigger_sequence="100"
+   default_alias_sequence="100"
+   detect_pueblo="y"
+   display_my_input="y"
+   echo_hyperlink_in_output_window="y"
+   edit_script_with_notepad="y"
+   enable_aliases="y"
+   enable_beeps="y"
+   enable_scripts="y"
+   enable_timers="y"
+   enable_triggers="y"
+   enable_trigger_sounds="y"
+   history_lines="1000"
+   hyperlink_adds_to_command_history="y"
+   hyperlink_colour="#0080FF"
+   indent_paras="y"
+   input_background_colour="white"
+   input_font_height="9"
+   input_font_weight="400"
+   input_text_colour="black"
+   keypad_enable="y"
+   line_information="y"
+   log_output="y"
+   max_output_lines="5000"
+   mud_can_change_link_colour="y"
+   mud_can_change_options="y"
+   note_text_colour="#040000"
+   output_font_height="9"
+   output_font_weight="400"
+   paste_delay_per_lines="1"
+   pixel_offset="1"
+   port="5656"
+   proxy_port="1080"
+   send_file_delay_per_lines="1"
+   send_mxp_afk_response="y"
+   show_connect_disconnect="y"
+   show_italic="y"
+   show_underline="y"
+   spam_line_count="20"
+   tab_completion_lines="200"
+   timestamp_input_text_colour="maroon"
+   timestamp_notes_text_colour="blue"
+   timestamp_output_text_colour="white"
+   timestamp_input_back_colour="black"
+   timestamp_notes_back_colour="black"
+   timestamp_output_back_colour="black"
+   tool_tip_visible_time="5000"
+   tool_tip_start_time="400"
+   treeview_timers="y"
+   underline_hyperlinks="y"
+   unpause_on_send="y"
+   use_custom_link_colour="y"
+   use_default_input_font="y"
+   use_default_output_font="y"
+   warn_if_scripting_inactive="y"
+   wrap="y"
+   wrap_column="80"
+   write_world_name_to_log="y"
+   > <!-- end of general world attributes -->
+
+</world>
+
+<!-- triggers -->
+
+<triggers
+   muclient_version="4.94"
+   world_file_version="15"
+   date_saved="2022-02-20 08:36:19"
+  >
+  <trigger
+   enabled="y"
+   group="grcombat"
+   match="!!SOUND(blaster*)"
+   name="blaster_sound3"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.2, 'PlaySound (3, "blaster.wav", false, -5, 0)', sendto.script)
+EnableTrigger("blaster_sound3", false)
+DoAfterSpecial(3, 'EnableTrigger("blaster_sound3", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="grcombat"
+   match="!!SOUND(blaster*)"
+   name="blaster_sound1"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (1, "blaster.wav", false, -5, 0)
+EnableTrigger("blaster_sound1", false)
+DoAfterSpecial(3, 'EnableTrigger("blaster_sound1", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="grcombat"
+   match="!!SOUND(blaster*)"
+   name="blaster_sound2"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.1, 'PlaySound (2, "blaster.wav", false, -5, 0)', sendto.script)
+EnableTrigger("blaster_sound2", false)
+DoAfterSpecial(3, 'EnableTrigger("blaster_sound2", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="grcombat"
+   match="!!SOUND(blaster*)"
+   name="blaster_sound4"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.3, 'PlaySound (4, "blaster.wav", false, -5, 0)', sendto.script)
+EnableTrigger("blaster_sound4", false)
+DoAfterSpecial(3, 'EnableTrigger("blaster_sound4", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="grcombat"
+   match="!!SOUND(blaster*)"
+   name="blaster_sound5"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.4, 'PlaySound (5, "blaster.wav", false, -5, 0)', sendto.script)
+EnableTrigger("blaster_sound5", false)
+DoAfterSpecial(3, 'EnableTrigger("blaster_sound5", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="sptravel"
+   match="!!SOUND(computer)"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (9, "computer.wav", false, -5, 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="grtravel"
+   match="!!SOUND(door)"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (0, "door.wav", false, -6, 0)  </send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="misc"
+   match="!!SOUND(help)"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (8, "help.wav", false, -3, 0)  </send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="misc"
+   match="!!SOUND(hopeknow)"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (6, "hopeknow.wav", false, -5, 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="misc"
+   match="!!SOUND(starwars)"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (7, "starwars.wav", false, -5, 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="!!SOUND(targetlock*)"
+   name="targetlock_sound2"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.1, 'PlaySound (2, "targetlock.wav", false, -5, 0)', sendto.script)
+EnableTrigger("targetlock_sound2", false)
+DoAfterSpecial(5, 'EnableTrigger("targetlock_sound2", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="!!SOUND(targetlock*)"
+   name="targetlock_sound5"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.1, 'PlaySound (5, "targetlock.wav", false, -5, 0)', sendto.script)
+EnableTrigger("targetlock_sound5", false)
+DoAfterSpecial(5, 'EnableTrigger("targetlock_sound5", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="!!SOUND(targetlock*)"
+   name="targetlock_sound4"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.2, 'PlaySound (4, "targetlock.wav", false, -5, 0)', sendto.script)
+EnableTrigger("targetlock_sound4", false)
+DoAfterSpecial(5, 'EnableTrigger("targetlock_sound4", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="!!SOUND(targetlock*)"
+   name="targetlock_sound3"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.2, 'PlaySound (3, "targetlock.wav", false, -5, 0)', sendto.script)
+EnableTrigger("targetlock_sound3", false)
+DoAfterSpecial(5, 'EnableTrigger("targetlock_sound3", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="!!SOUND(targetlock*)"
+   name="targetlock_sound1"
+   omit_from_output="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (1, "targetlock.wav", false, -5, 0)
+EnableTrigger("targetlock_sound1", false)
+DoAfterSpecial(5, 'EnableTrigger("targetlock_sound1", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="ambience"
+   match="* lands on the platform."
+   name="ship_landing_sound2"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.1, 'PlaySound (2, "ship_landing.wav", false, -5, 0)', sendto.script)
+EnableTrigger("ship_landing_sound2", false)
+DoAfterSpecial(5, 'EnableTrigger("ship_landing_sound2", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="ambience"
+   match="* lands on the platform."
+   name="ship_landing_sound1"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (1, "ship_landing.wav", false, -5, 0)
+EnableTrigger("ship_landing_sound1", false)
+DoAfterSpecial(5, 'EnableTrigger("ship_landing_sound1", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="ambience"
+   match="* lands on the platform."
+   name="ship_landing_sound3"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.2, 'PlaySound (3, "ship_landing.wav", false, -5, 0)', sendto.script)
+EnableTrigger("ship_landing_sound3", false)
+DoAfterSpecial(5, 'EnableTrigger("ship_landing_sound3", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="ambience"
+   match="* lands on the platform."
+   name="ship_landing_sound4"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.2, 'PlaySound (4, "ship_landing.wav", false, -5, 0)', sendto.script)
+EnableTrigger("ship_landing_sound4", false)
+DoAfterSpecial(5, 'EnableTrigger("ship_landing_sound4", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="ambience"
+   match="* lands on the platform."
+   name="ship_landing_sound5"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.1, 'PlaySound (5, "ship_landing.wav", false, -5, 0)', sendto.script)
+EnableTrigger("ship_landing_sound5", false)
+DoAfterSpecial(5, 'EnableTrigger("ship_landing_sound5", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="grcombat"
+   match="*A sphere of blue forms around*"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (0, "shield_on.wav", false, -12, 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="mundane"
+   match="*The energy shield's display blinks red: Warming Up"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (0, "shield_wear.wav", false, -12, 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="sptravel"
+   match="*The ship begins to slow down."
+   name="speed_down_sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (0, "speed_down.wav", false, -5, 0)
+EnableTrigger("speed_down_sound", false)
+DoAfterSpecial(5, 'EnableTrigger("speed_down_sound", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="sptravel"
+   match="*The ship lurches slightly as it comes out of hyperspace."
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (0, "hyperspeed_out.wav", false, -12, 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="grcombat"
+   match="*You activate the device and a shield of blue energy surrounds you."
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (0, "shield_on.wav", false, -12, 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="ambience"
+   match="*You hear blaster fire from *."
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (0, "blaster.wav", false, -12, 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="engineer"
+   match="*You set to work repairing the damaged *."
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (7, "repair.wav", false, -12, 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="mundane"
+   match="*You wear*"
+   name="equipment_sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (0, "wear_equipment.wav", false, -5, 0)
+EnableTrigger("equipment_sound", false)
+DoAfterSpecial(5, 'EnableTrigger("equipment_sound", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="mundane"
+   match="*Your energy shield's display turns solid green as it comes online."
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (0, "shield_charged.wav", false, -12, 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="A * explodes in your chaff."
+   name="projectile_chaffed_sound5"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.1, 'PlaySound (5, "projectile_exploded.wav", false, -5, 0)', sendto.script)
+EnableTrigger("projectile_chaffed_sound5", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_chaffed_sound5", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="A * explodes in your chaff."
+   name="projectile_chaffed_sound4"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.2, 'PlaySound (4, "projectile_exploded.wav", false, -5, 0)', sendto.script)
+EnableTrigger("projectile_chaffed_sound4", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_chaffed_sound4", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="A * explodes in your chaff."
+   name="projectile_chaffed_sound1"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (1, "projectile_exploded.wav", false, -5, 0)
+EnableTrigger("projectile_chaffed_sound1", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_chaffed_sound1", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="A * explodes in your chaff."
+   name="projectile_chaffed_sound3"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.2, 'PlaySound (3, "projectile_exploded.wav", false, -5, 0)', sendto.script)
+EnableTrigger("projectile_chaffed_sound3", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_chaffed_sound3", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="A * explodes in your chaff."
+   name="projectile_chaffed_sound2"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.1, 'PlaySound (2, "projectile_exploded.wav", false, -5, 0)', sendto.script)
+EnableTrigger("projectile_chaffed_sound2", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_chaffed_sound2", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="A * is launched toward*"
+   name="projectile_fired_sound4"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.2, 'PlaySound (4, "projectile_fired.wav", false, -5, 0)', sendto.script)
+EnableTrigger("projectile_fired_sound4", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_fired_sound4", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="A * is launched toward*"
+   name="projectile_fired_sound2"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.1, 'PlaySound (2, "projectile_fired.wav", false, -5, 0)', sendto.script)
+EnableTrigger("projectile_fired_sound2", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_fired_sound2", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="A * is launched toward*"
+   name="projectile_fired_sound5"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.1, 'PlaySound (5, "projectile_fired.wav", false, -5, 0)', sendto.script)
+EnableTrigger("projectile_fired_sound5", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_fired_sound5", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="A * is launched toward*"
+   name="projectile_fired_sound1"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (1, "projectile_fired.wav", false, -5, 0)
+EnableTrigger("projectile_fired_sound1", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_fired_sound1", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="A * is launched toward*"
+   name="projectile_fired_sound3"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.2, 'PlaySound (3, "projectile_fired.wav", false, -5, 0)', sendto.script)
+EnableTrigger("projectile_fired_sound3", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_fired_sound3", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="mundane"
+   match="Damn! Your datapad returns an error message!!"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (0, "access_denied.wav", false, -12, 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="mundane"
+   match="Damn, you must have entered the wrong data!"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (0, "access_denied.wav", false, -12, 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="The ship is hit by a *!"
+   name="projectile_exploded_sound2"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.1, 'PlaySound (2, "projectile_exploded.wav", false, -5, 0)', sendto.script)
+EnableTrigger("projectile_exploded_sound2", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_exploded_sound2", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="The ship is hit by a *!"
+   name="projectile_exploded_sound1"
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (1, "projectile_exploded.wav", false, -5, 0)
+EnableTrigger("projectile_exploded_sound1", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_exploded_sound1", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="The ship is hit by a *!"
+   name="projectile_exploded_sound5"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.1, 'PlaySound (5, "projectile_exploded.wav", false, -5, 0)', sendto.script)
+EnableTrigger("projectile_exploded_sound5", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_exploded_sound5", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="The ship is hit by a *!"
+   name="projectile_exploded_sound3"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.2, 'PlaySound (3, "projectile_exploded.wav", false, -5, 0)', sendto.script)
+EnableTrigger("projectile_exploded_sound3", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_exploded_sound3", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="spcombat"
+   match="The ship is hit by a *!"
+   name="projectile_exploded_sound4"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfterSpecial(0.2, 'PlaySound (4, "projectile_exploded.wav", false, -5, 0)', sendto.script)
+EnableTrigger("projectile_exploded_sound4", false)
+DoAfterSpecial(5, 'EnableTrigger("projectile_exploded_sound4", true)', sendto.script)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="mundane"
+   match="You fail to call up the right info on the datapad."
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (0, "access_denied.wav", false, -12, 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="mundane"
+   match="You scan * and wait for the databank to retrieve a file on *."
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (9, "lookup.wav", false, -12, 0)</send>
+  </trigger>
+  <trigger
+   enabled="y"
+   group="ambience"
+   match="Your wounds heal slightly as the bacta flows over you."
+   send_to="12"
+   sequence="100"
+  >
+  <send>PlaySound (0, "bacta.wav", false, -7, 0)  </send>
+  </trigger>
+</triggers>
+
+<!-- aliases -->
+
+<aliases
+   muclient_version="4.94"
+   world_file_version="15"
+   date_saved="2022-02-20 08:36:19"
+  >
+  <alias
+   match="soundall off"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("sptravel", false)
+EnableTriggerGroup("spcombat", false)
+EnableTriggerGroup("grtravel", false)
+EnableTriggerGroup("grcombat", false)
+EnableTriggerGroup("ambience", false)
+EnableTriggerGroup("engineer", false)
+EnableTriggerGroup("misc", false)
+EnableTriggerGroup("mundane", false)
+ColourNote ("grey", "black", "All sounds are now disabled.")</send>
+  </alias>
+  <alias
+   match="soundall on"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("sptravel", true)
+EnableTriggerGroup("spcombat", true)
+EnableTriggerGroup("grtravel", true)
+EnableTriggerGroup("grcombat", true)
+EnableTriggerGroup("ambience", true)
+EnableTriggerGroup("engineer", true)
+EnableTriggerGroup("misc", true)
+EnableTriggerGroup("mundane", true)
+ColourNote ("grey", "black", "All sounds are now enabled.")</send>
+  </alias>
+  <alias
+   match="soundambience off"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("ambience", false)
+ColourNote ("grey", "black", "Ambience sounds are now disabled.")</send>
+  </alias>
+  <alias
+   match="soundambience on"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("ambience", true)
+ColourNote ("grey", "black", "Ambience sounds are now enabled.")</send>
+  </alias>
+  <alias
+   match="soundengineer off"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("engineer", false)
+ColourNote ("grey", "black", "Engineering sounds are now disabled.")</send>
+  </alias>
+  <alias
+   match="soundengineer on"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("engineer", true)
+ColourNote ("grey", "black", "Engineering sounds are now enabled.")</send>
+  </alias>
+  <alias
+   match="soundgrcombat off"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("grcombat", false)
+ColourNote ("grey", "black", "Ground combat sounds are now disabled.")</send>
+  </alias>
+  <alias
+   match="soundgrcombat on"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("grcombat", true)
+ColourNote ("grey", "black", "Ground combat sounds are now enabled.")</send>
+  </alias>
+  <alias
+   match="soundgrtravel off"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("grtravel", false)
+ColourNote ("grey", "black", "Ground travel sounds are now disabled.")</send>
+  </alias>
+  <alias
+   match="soundgrtravel on"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("grtravel", true)
+ColourNote ("grey", "black", "Ground travel sounds are now enabled.")</send>
+  </alias>
+  <alias
+   match="soundhelp"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>ColourNote ("grey", "black", "")
+ColourNote ("grey", "black", "         -Legends of the Jedi Sounds-")
+ColourNote ("grey", "black", "soundhelp                - Brings up this page")
+ColourNote ("grey", "black", "soundall on/off          - Toggles the plugin")
+ColourNote ("grey", "black", "")
+ColourNote ("grey", "black", "soundsptravel on/off     - Toggles space travel sounds")
+ColourNote ("grey", "black", "soundspcombat on/off     - Toggles space combat sounds")
+ColourNote ("grey", "black", "soundgrtravel on/off     - Toggles ground travel sounds")
+ColourNote ("grey", "black", "soundgrcombat on/off     - Toggles ground combat sounds")
+ColourNote ("grey", "black", "soundambience on/off     - Toggles ambience sounds")
+ColourNote ("grey", "black", "soundengineer on/off     - Toggles engineer sounds")
+ColourNote ("grey", "black", "")
+ColourNote ("grey", "black", "soundmisc on/off         - Toggles miscellaneous sounds")
+ColourNote ("grey", "black", "soundmundane on/off      - Toggles mundane sounds")</send>
+  </alias>
+  <alias
+   match="soundmisc off"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("misc", false)
+ColourNote ("grey", "black", "Miscellaneous sounds are now disabled.")</send>
+  </alias>
+  <alias
+   match="soundmisc on"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("misc", true)
+ColourNote ("grey", "black", "Miscellaneous sounds are now enabled.")</send>
+  </alias>
+  <alias
+   match="soundmundane off"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("mundane", false)
+ColourNote ("grey", "black", "Mundane sounds are now disabled.")</send>
+  </alias>
+  <alias
+   match="soundmundane on"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("mundane", true)
+ColourNote ("grey", "black", "Mundane sounds are now enabled.")</send>
+  </alias>
+  <alias
+   match="soundspcombat off"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("spcombat", false)
+ColourNote ("grey", "black", "Space combat sounds are now disabled.")</send>
+  </alias>
+  <alias
+   match="soundspcombat on"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("spcombat", true)
+ColourNote ("grey", "black", "Space combat sounds are now enabled.")</send>
+  </alias>
+  <alias
+   match="soundsptravel off"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("sptravel", false)
+ColourNote ("grey", "black", "Space travel sounds are now disabled.")</send>
+  </alias>
+  <alias
+   match="soundsptravel on"
+   enabled="y"
+   group="MSP_Sound"
+   send_to="12"
+   sequence="100"
+  >
+  <send>EnableTriggerGroup("sptravel", true)
+ColourNote ("grey", "black", "Space travel sounds are now enabled.")</send>
+  </alias>
+</aliases>
+
+<!-- timers -->
+
+<timers
+   muclient_version="4.94"
+   world_file_version="15"
+   date_saved="2022-02-20 08:36:19"
+  >
+</timers>
+
+<!-- macros -->
+
+<macros
+   muclient_version="4.94"
+   world_file_version="15"
+   date_saved="2022-02-20 08:36:19"
+  >
+
+  <macro name="up" type="send_now" >
+  <send>up</send>
+
+  </macro>
+
+  <macro name="down" type="send_now" >
+  <send>down</send>
+
+  </macro>
+
+  <macro name="north" type="send_now" >
+  <send>north</send>
+
+  </macro>
+
+  <macro name="south" type="send_now" >
+  <send>south</send>
+
+  </macro>
+
+  <macro name="east" type="send_now" >
+  <send>east</send>
+
+  </macro>
+
+  <macro name="west" type="send_now" >
+  <send>west</send>
+
+  </macro>
+
+  <macro name="examine" type="replace" >
+  <send>examine </send>
+
+  </macro>
+
+  <macro name="look" type="replace" >
+  <send>look </send>
+
+  </macro>
+
+  <macro name="page" type="replace" >
+  <send>page </send>
+
+  </macro>
+
+  <macro name="say" type="replace" >
+  <send>say </send>
+
+  </macro>
+
+  <macro name="whisper" type="replace" >
+  <send>whisper </send>
+
+  </macro>
+
+  <macro name="doing" type="send_now" >
+  <send>DOING</send>
+
+  </macro>
+
+  <macro name="who" type="send_now" >
+  <send>WHO</send>
+
+  </macro>
+
+  <macro name="drop" type="replace" >
+  <send>drop </send>
+
+  </macro>
+
+  <macro name="take" type="replace" >
+  <send>take </send>
+
+  </macro>
+
+  <macro name="logout" type="send_now" >
+  <send>LOGOUT</send>
+
+  </macro>
+
+  <macro name="quit" type="send_now" >
+  <send>QUIT</send>
+
+  </macro>
+</macros>
+
+<!-- variables -->
+
+<variables
+   muclient_version="4.94"
+   world_file_version="15"
+   date_saved="2022-02-20 08:36:19"
+  >
+</variables>
+
+<!-- colours -->
+
+<colours
+   muclient_version="4.94"
+   world_file_version="15"
+   date_saved="2022-02-20 08:36:19"
+  >
+
+<ansi>
+
+ <normal>
+   <colour seq="1" rgb="black" />
+   <colour seq="2" rgb="maroon" />
+   <colour seq="3" rgb="green" />
+   <colour seq="4" rgb="olive" />
+   <colour seq="5" rgb="navy" />
+   <colour seq="6" rgb="purple" />
+   <colour seq="7" rgb="teal" />
+   <colour seq="8" rgb="silver" />
+
+ </normal>
+
+ <bold>
+   <colour seq="1" rgb="gray" />
+   <colour seq="2" rgb="red" />
+   <colour seq="3" rgb="lime" />
+   <colour seq="4" rgb="yellow" />
+   <colour seq="5" rgb="blue" />
+   <colour seq="6" rgb="magenta" />
+   <colour seq="7" rgb="cyan" />
+   <colour seq="8" rgb="white" />
+
+ </bold>
+
+</ansi>
+
+<custom>
+  <colour seq="1" name="Custom1" text="#FF8080" back="black" />
+  <colour seq="2" name="Custom2" text="#FFFF80" back="black" />
+  <colour seq="3" name="Custom3" text="#80FF80" back="black" />
+  <colour seq="4" name="Custom4" text="#80FFFF" back="black" />
+  <colour seq="5" name="Custom5" text="#0080FF" back="black" />
+  <colour seq="6" name="Custom6" text="#FF80C0" back="black" />
+  <colour seq="7" name="Custom7" text="red" back="black" />
+  <colour seq="8" name="Custom8" text="#0080C0" back="black" />
+  <colour seq="9" name="Custom9" text="magenta" back="black" />
+  <colour seq="10" name="Custom10" text="#804040" back="black" />
+  <colour seq="11" name="Custom11" text="#FF8040" back="black" />
+  <colour seq="12" name="Custom12" text="teal" back="black" />
+  <colour seq="13" name="Custom13" text="#004080" back="black" />
+  <colour seq="14" name="Custom14" text="#FF0080" back="black" />
+  <colour seq="15" name="Custom15" text="green" back="black" />
+  <colour seq="16" name="Custom16" text="blue" back="black" />
+
+</custom>
+</colours>
+
+<!-- keypad -->
+
+<keypad
+   muclient_version="4.94"
+   world_file_version="15"
+   date_saved="2022-02-20 08:36:19"
+  >
+
+  <key name="0" >
+  <send>look</send>
+  </key>
+
+  <key name="1" >
+  <send>sw</send>
+  </key>
+
+  <key name="2" >
+  <send>south</send>
+  </key>
+
+  <key name="3" >
+  <send>se</send>
+  </key>
+
+  <key name="4" >
+  <send>west</send>
+  </key>
+
+  <key name="5" >
+  <send>WHO</send>
+  </key>
+
+  <key name="6" >
+  <send>east</send>
+  </key>
+
+  <key name="7" >
+  <send>nw</send>
+  </key>
+
+  <key name="8" >
+  <send>north</send>
+  </key>
+
+  <key name="9" >
+  <send>ne</send>
+  </key>
+
+  <key name="." >
+  <send>hide</send>
+  </key>
+
+  <key name="/" >
+  <send>inventory</send>
+  </key>
+
+  <key name="*" >
+  <send>score</send>
+  </key>
+
+  <key name="-" >
+  <send>up</send>
+  </key>
+
+  <key name="+" >
+  <send>down</send>
+  </key>
+
+  <key name="Ctrl+0" >
+  </key>
+
+  <key name="Ctrl+1" >
+  </key>
+
+  <key name="Ctrl+2" >
+  </key>
+
+  <key name="Ctrl+3" >
+  </key>
+
+  <key name="Ctrl+4" >
+  </key>
+
+  <key name="Ctrl+5" >
+  </key>
+
+  <key name="Ctrl+6" >
+  </key>
+
+  <key name="Ctrl+7" >
+  </key>
+
+  <key name="Ctrl+8" >
+  </key>
+
+  <key name="Ctrl+9" >
+  </key>
+
+  <key name="Ctrl+." >
+  </key>
+
+  <key name="Ctrl+/" >
+  </key>
+
+  <key name="Ctrl+*" >
+  </key>
+
+  <key name="Ctrl+-" >
+  </key>
+
+  <key name="Ctrl++" >
+  </key>
+</keypad>
+
+<!-- printing -->
+
+<printing
+   muclient_version="4.94"
+   world_file_version="15"
+   date_saved="2022-02-20 08:36:19"
+  >
+
+<ansi>
+
+ <normal>
+
+ </normal>
+
+ <bold>
+   <style seq="1" bold="y" />
+   <style seq="2" bold="y" />
+   <style seq="3" bold="y" />
+   <style seq="4" bold="y" />
+   <style seq="5" bold="y" />
+   <style seq="6" bold="y" />
+   <style seq="7" bold="y" />
+   <style seq="8" bold="y" />
+
+ </bold>
+
+</ansi>
+</printing>
+</muclient>
