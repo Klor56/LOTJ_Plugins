@@ -1,0 +1,1 @@
+To get the Lotj_MSP plugin working, you need to download the Lotj_MSP.xml plugin file and the sounds.zip file. The sounds.zip file needs to be extracted into your "%directory%\Mushclient\sound" file. Install the plugin through file > plugins > install. In the game type SOUND ON and CONFIG +SOUND
